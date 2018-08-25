@@ -1,0 +1,20 @@
+{% extends 'basetheme.html' %}
+<!--p.id, author_id, theme_created, theme_text'-->
+{% block header %}
+  <h1>{% block title %}theme{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('theme.createtheme') }}">new</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for theme in themes %}
+     <div>
+        <div class="about">{{theme['theme_text']}} {{theme['theme_created'].strftime('%Y-%m-%d %H:%M:%S') }}</div>
+     </div>
+     {% if g.user['user_id'] == theme['author_id'] %}
+        <a class="action" href="{{url_for('theme.updatetheme', theme_id=theme['theme_id'])}}">{{theme_id}}Edit</a>
+     {% endif %}
+      <hr>
+  {% endfor %}
+{% endblock %}

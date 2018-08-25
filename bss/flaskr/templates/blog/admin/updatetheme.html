@@ -1,0 +1,17 @@
+{% extends 'basetheme.html' %}
+
+{% block header %}
+  <h1>{% block title %}edit"{{ theme['theme_text'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <label for="theme_text">theme</label>
+    <input name="theme_text" id="theme_text" value="{{request.form['theme_text'] or theme['theme_text']}}" required>
+    <input type="submit" value="Save">
+</form>
+
+ <form action="{{ url_for('theme.deletetheme', theme_id=theme['theme_id']) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+ </form>
+{% endblock %}

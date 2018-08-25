@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h3>{% block title %}{{post['post_title'] }}{% endblock %}</h3>
+{% endblock %}
+
+{% block content %}
+   <article class="GET">
+      <header>
+        <div>
+          <p>{{ post['theme_text'] }}</p>
+          <div class="about">by {{ post['username'] }} on {{ post['post_created'].strftime('%Y-%m-%d %H:%M:%S') }}<br/></div>
+        </div>
+      </header>
+      <p class="body">{{ post['post_body'] }}</p>
+   </article>
+
+ <form  method="post">
+    <textarea name="reply_text" id="reply_text">{{ request.form['reply_text']}}</textarea>
+    <input type="submit" value="回复">
+ </form>
+
+  {% for reply in replys %}
+    <article class = "GET">
+      <header>
+        <div>
+          <div class="about"> build on {{ reply['reply_created'].strftime('%Y-%m-%d %H:%M:%S') }} by {{reply['username']}}</div>
+        </div>
+      </header>
+      <p class="body">{{ reply['reply_text'] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+
+  {% endfor %}
+{% endblock %}

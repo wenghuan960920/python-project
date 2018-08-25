@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+  <h1>{% block title %}New Post{% endblock %}</h1>
+{% endblock %}
+
+
+
+{% block content %}
+  <form method="post">
+    <label for="post_title">Title</label>
+    <input name="post_title" id="post_title" value="{{ request.form['post_title'] }}" required>
+    <select name="theme_id">
+      {% for theme in themes %}
+      <option value ="{{theme['theme_id']}}">{{ theme['theme_text'] }}</option>
+      {% endfor %}
+    </select>
+    <label for="post_body">Body</label>
+    <textarea name="post_body" id="post_body">{{ request.form['post_body'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
+

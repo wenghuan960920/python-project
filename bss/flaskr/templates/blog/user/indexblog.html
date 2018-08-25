@@ -1,0 +1,31 @@
+<!--帖子索引,有对新帖子的创建功能，有个人功能的展示-->
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Posts{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('blog.createblog') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<!--#注意此处的posts ,是从后台而来的变量-->
+  {% for post in posts %}
+    <article class="post">
+      <header>
+        <div>
+          <a class="action" href="{{ url_for('blog.indexone', post_id=post['post_id']) }}">{{ post['post_title'] }}</a>
+          <p>{{ post['theme_text'] }}</p>
+          <div class="about">by {{ post['username'] }} on {{ post['post_created'].strftime('%Y-%m-%d %H:%M:%S') }} </div>
+        </div>
+      </header>
+      <p class="body">{{ post['post_body'] }}</p>
+        {% if g.user['user_id'] == post['author_id'] %}
+        <a class="action" href="{{ url_for('blog.updateblog', post_id=post['post_id']) }}">Edit</a>
+        {% endif %}
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

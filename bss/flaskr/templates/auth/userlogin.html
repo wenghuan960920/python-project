@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}log in{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">username</label>
+    <input name="username" id="username" required>
+    <label for="user_password">password</label>
+    <!--type属性很重要-->
+    <input type="password" name="user_password" id="user_password" required>
+    <!--<input type="submit" value="Log In">-->
+    <!--button是按钮，submit是提交，点击submit会跳转<form class="passanddel" action="">action这里面的地址 点击button不写js没有任何操作-->
+    <!-- 此处无论点击谁都会进入auth.login -->
+    <input type="submit"  value=" Log In"></a>
+
+  </form>
+{% endblock %}

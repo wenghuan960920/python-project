@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="tutorial" />
+    <orderEntry type="module" module-name="flask" />
+    <orderEntry type="module" module-name="itest2-master-d8255c1a02ceadc94f87ba6732dd25720f26f5b7" />
+    <orderEntry type="module" module-name="flaskdemo" />
+    <orderEntry type="module" module-name="tree" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="py.test" />
+    <option name="PROJECT_TEST_RUNNER" value="py.test" />
+  </component>
+</module>

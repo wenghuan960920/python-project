@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../blog1/.idea/blog1.iml" filepath="$PROJECT_DIR$/../blog1/.idea/blog1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../blog2/.idea/blog2.iml" filepath="$PROJECT_DIR$/../blog2/.idea/blog2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flask/.idea/flask-armdome.iml" filepath="$PROJECT_DIR$/../flask/.idea/flask-armdome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flaskdemo/.idea/flaskdemo.iml" filepath="$PROJECT_DIR$/../flaskdemo/.idea/flaskdemo.iml" />
+      <module fileurl="file://$USER_HOME$/xiaoying/itest2/.idea/itest2.iml" filepath="$USER_HOME$/xiaoying/itest2/.idea/itest2.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/itest2-master-d8255c1a02ceadc94f87ba6732dd25720f26f5b7/.idea/itest2-master-d8255c1a02ceadc94f87ba6732dd25720f26f5b7.iml" filepath="$USER_HOME$/Downloads/itest2-master-d8255c1a02ceadc94f87ba6732dd25720f26f5b7/.idea/itest2-master-d8255c1a02ceadc94f87ba6732dd25720f26f5b7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tree/.idea/tree.iml" filepath="$PROJECT_DIR$/../tree/.idea/tree.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/flask-master/examples/tutorial/.idea/tutorial.iml" filepath="$USER_HOME$/Downloads/flask-master/examples/tutorial/.idea/tutorial.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+{% extends 'basetheme.html' %}
+
+{% block header %}
+  <h1>{% block title %}new theme{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="theme_text">Title</label>
+    <input name="theme_text" id="theme_text" value="{{request.form['theme_text']}}"required>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
